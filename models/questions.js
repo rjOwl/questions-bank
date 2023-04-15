@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const QuestionSchema = new mongoose.Schema({
     name: { type: String, required: true, index: true },
-    tag_list: [{ type: Schema.Types.ObjectId, ref: 'Tag' }],
+    tag_list: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Tag', required:True }],
 })
 
 const QuestionModel = mongoose.model('Question', QuestionSchema)
