@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const TagSchema = new Schema({
     _name: String,
-    children: [{ type: Schema.Types.ObjectId, ref: 'Tag' }]
+    path: { type: String, required: true },
   }
 )
 const TagModel = mongoose.model('Tag', TagSchema);
