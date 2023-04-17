@@ -10,8 +10,14 @@ Node API that uses MongoDB with Mongoose to store questions and their tags, to s
 ## Setup
 - Clone this Repo
 - Install requirements using npm install
-- Setup the .env file from the .env.sample file
-- Start setup account on mongodb Atlas and use your credentials in the .env file
+- Setup account on mongodb Atlas and create your username/pass, cluster, database then use your credentials in the .env file
+- Copy paste tese variable in your .env file and set the values you got from Mongo Atlas 
+    - DB_SU=
+    - DB_SU_PASS=
+    - CLUSTER=
+    - DBNAME=
+    - TESTENV=
+    - PRODENV=
 - Start the server using `npm start`
 - Seed question and topics using the POST requests to `/questions` and `/tags`
 
