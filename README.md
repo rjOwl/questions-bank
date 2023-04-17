@@ -31,8 +31,8 @@ The database is hosted on [Mongo Atlas](https://cloud.mongodb.com/)
 
 ### App
 The app is hosted on https://railway.app
-Access questions the API via http://questions-bank-production.up.railway.app/tags/
-Access tags the API via http://questions-bank-production.up.railway.app/questions/
+- Access questions the API via http://questions-bank-production.up.railway.app/tags/
+- Access tags the API via http://questions-bank-production.up.railway.app/questions/
 
 ## Queries
 To query the database make a get request to the route `http://questions-bank-production.up.railway.app/questions/search?q=<query>`
