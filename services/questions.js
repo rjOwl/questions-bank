@@ -6,8 +6,6 @@ const TagModel = require('../models/tags');
 // 2 use
 
 // check if dataset is loaded
-const questionsCount = async()=>{await QuestionModel.count()};
-
 
 const loadQJsonTestObj = async()=>{
     console.log("services/questions.js")
@@ -15,32 +13,16 @@ const loadQJsonTestObj = async()=>{
     return result;
 }
 
-
 const getAllQuestionsService = async()=>{
     try{
         const result = await QuestionModel.find({});
-        return {"Questions": result}
+        return result
     }catch{
         return result;
     }
 }
 
 // logic
-const insertQuestion = async(tag)=>{
-    q = new QuestionModel({
-        name: "1",
-        tags:[tag]
-    })
-    await QuestionModel.save((err) => {
-        if (err) {
-          console.error(err);
-          return -1;
-        }
-        console.log('Questions created successfully');
-        return 1;
-      });
-}
-
 const  findQuestinosInDescendantsByAnnotation = async(tagName)=> {
     // Find all tags that either have the specified tag name in their ancestors path
     // or have the same ID as the specified tag name
@@ -65,6 +47,5 @@ const  findQuestinosInDescendantsByAnnotation = async(tagName)=> {
 module.exports = {
     loadQJsonTestObj,
     getAllQuestionsService,
-     questionsCount, insertQuestion,
-     findQuestinosInDescendantsByAnnotation}
+    findQuestinosInDescendantsByAnnotation}
 
