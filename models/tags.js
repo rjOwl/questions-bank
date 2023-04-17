@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
 require('dotenv').config()
 
-const TagSchema = new Schema({
-    _name: String,
-    path: { type: String, required: true },
+const TagSchema = new mongoose.Schema({
+    name: {type: String, required: true, unique : true},
+    ancestors_path: [{ type: String, required: true }],
+    created_at: { type: Date, default: Date.now },
+    updated_at: { type: Date, default: Date.now },
   }
 )
-const TagModel = mongoose.model('Tag', TagSchema);
+const TagModel = mongoose.model('tags', TagSchema);
+
 module.exports = TagModel;
