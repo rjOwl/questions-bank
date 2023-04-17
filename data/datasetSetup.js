@@ -1,10 +1,10 @@
-const { qJson } = require('./questions');
-const { tagJson } = require('./topics');
+const { qJson } = require('./questions_raw_documents');
+const { tagJson } = require('./tags_raw_documents');
 
 
-let topic_tree = ((topics) =>{
+let topic_tree = ((tags) =>{
     let topicMap = new Map();
-    topics.forEach((topic) => {
+    tags.forEach((topic) => {
       if (topic['Tag Level 3']) {
         topicMap.set(topic['Tag Level 3'], { name: topic['Tag Level 3'], ancestors_path: [topic['Tag Level 1'], topic['Tag Level 2']],});
       }
@@ -39,9 +39,6 @@ let topic_tree = ((topics) =>{
     });
     return cleanedQuestions;
 })(qJson)
-
-// topic_tree = generateTopicsObjTree(tagJson)
-// question_tree = generateQuestionsObjs(qJson)
 
 module.exports={
     topic_tree,
