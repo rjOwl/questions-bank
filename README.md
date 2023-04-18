@@ -50,6 +50,8 @@ since I'm not sure if topics could contain "," or the special charater I'm going
 - mongodb
 - mongoose
 - npm
+- swagger-ui-express
+- swagger-jsdoc
 
 ## Setup after cloning the repo
 - Create `.env` file in the root directory of your application
@@ -67,7 +69,15 @@ since I'm not sure if topics could contain "," or the special charater I'm going
     - By default it will create 2 documents, quesionts and tags. If you want to change it go ahead it will be in the models directory, have fun.
 
 
-## Endpoints
+## API documenting
+
+- Integrated Swagger with NodeJS
+![image](https://user-images.githubusercontent.com/11742610/232916721-9d42ef6e-7994-475a-b8a2-e037229abb23.png)
+
+Endpoint can be found here: http://localhost:3000/api-docs/#/
+
+**Endpoint spoiler** 
+
 | Endpoints                                     | Method  | Description                                         |
 |-----------------------------------------------|---------|-----------------------------------------------------|
 |  /api/v1/questions/populate                   | POST    | Add all questions to database from JS file          |
