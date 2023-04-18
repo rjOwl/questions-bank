@@ -1,47 +1,47 @@
 # questions-bank
-Node API that uses MongoDB with Mongoose to store questions and their tags, to search and retrive questions based on tags from a topic tree.
+Simple restful api to store questions and their tags, to search and retrive questions based on tags from a topic tree.
 
 ## Requirements
-- Node
+- NodeJS
 - Express
 - mongodb
+- mongoose
 - npm
 
-## Setup
-- Clone this Repo
-- Install requirements using npm install
-- Setup account on mongodb Atlas and create your username/pass, cluster, database then use your credentials in the .env file
-- Copy paste tese variable in your .env file and set the values you got from Mongo Atlas 
+## Setup after cloning the repo
+- Create `.env` file in the root directory of your application
+- Install requirements in package.json using `npm install`
+- Setup account on mongodb Atlas and create your username/pass, cluster, database.
+- Copy/paste these values in your .env file you created and assign the values you got from Mongodb Atlas to the below variables and save it 
     - DB_SU=
     - DB_SU_PASS=
     - CLUSTER=
     - DBNAME=
     - TESTENV=
     - PRODENV=
-- Start the server using `npm start`
-- Seed question and topics using the POST requests to `/api/v1/questions` and `/api/v1/tags`
+- Start the server using `npm start`. I'm using nodemon since I was developing but you're free to do anything you like.
+- Create question and topics using the POST requests to `/api/v1/questions` and `/api/v1/tags`
+    - By default it will create 2 documents, quesionts and tags. If you want to change it go ahead it will be in the models directory, have fun.
 
 
-## Endpoints available
+## Endpoints exist
 | Endpoints                                     | Method  | Description                                         |
 |-----------------------------------------------|---------|-----------------------------------------------------|
-|  /api/v1/questions/populate                   | POST    | add all questions to database from JS file          |
-|  /api/v1/questions                            | GET     | fetch all questions from database                   | 
-|  /api/v1/tags/populate                        | POST    | add all topics to database from JS   file           |
-|  /api/v1/tags                                 | GET     | fetch all topics from database                      |
-|  /api/v1/questions/search?q=query             | GET     | returns an array questions with the annotation query|
+|  /api/v1/questions/populate                   | POST    | Add all questions to database from JS file          |
+|  /api/v1/questions                            | GET     | Fetch all questions from database                   | 
+|  /api/v1/tags/populate                        | POST    | Add all topics to database from JS file             |
+|  /api/v1/tags                                 | GET     | Fetch all topics from database                      |
+|  /api/v1/questions/search?q=query             | GET     | Returns an array questions with the annotation query|
 
 ## Hosting
 ### Database
-The database is hosted on [Mongo Atlas](https://cloud.mongodb.com/)
+I used [Mongo Atlas](https://cloud.mongodb.com/) to host the database, hence the .env
 
 ### App
 The app is hosted on https://railway.app
-- Access questions the API via http://questions-bank-production.up.railway.app/api/v1/tags/
-- Access tags the API via http://questions-bank-production.up.railway.app/api/v1/questions/
+- Base URL>> http://questions-bank-production.up.railway.app
 
-## Queries
-To query the database make a get request to the route `http://questions-bank-production.up.railway.app/api/v1/questions/search?q=<query>`
+## Requests/responses example
 E.g.
 `http://questions-bank-production.up.railway.app/api/v1/questions/search?q=Cytoplasm`
 should return
