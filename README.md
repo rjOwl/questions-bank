@@ -19,17 +19,17 @@ Node API that uses MongoDB with Mongoose to store questions and their tags, to s
     - TESTENV=
     - PRODENV=
 - Start the server using `npm start`
-- Seed question and topics using the POST requests to `/questions` and `/tags`
+- Seed question and topics using the POST requests to `/api/v1/questions` and `/api/v1/tags`
 
 
 ## Endpoints available
-| Endpoints                              | Method  | Description                                         |
-|----------------------------------------|---------|-----------------------------------------------------|
-|  /questions/populate                   | POST    | add all questions to database from JS file          |
-|  /questions/all                        | GET     | fetch all questions from database                   | 
-|  /tags/populate                        | POST    | add all topics to database from JS   file           |
-|  /tags/all                             | GET     | fetch all topics from database                      |
-|  /questions/search?q=query             | GET     | returns an array questions with the annotation query|
+| Endpoints                                     | Method  | Description                                         |
+|-----------------------------------------------|---------|-----------------------------------------------------|
+|  /api/v1/questions/populate                   | POST    | add all questions to database from JS file          |
+|  /api/v1/questions                            | GET     | fetch all questions from database                   | 
+|  /api/v1/tags/populate                        | POST    | add all topics to database from JS   file           |
+|  /api/v1/tags                                 | GET     | fetch all topics from database                      |
+|  /api/v1/questions/search?q=query             | GET     | returns an array questions with the annotation query|
 
 ## Hosting
 ### Database
@@ -37,13 +37,13 @@ The database is hosted on [Mongo Atlas](https://cloud.mongodb.com/)
 
 ### App
 The app is hosted on https://railway.app
-- Access questions the API via http://questions-bank-production.up.railway.app/tags/
-- Access tags the API via http://questions-bank-production.up.railway.app/questions/
+- Access questions the API via http://questions-bank-production.up.railway.app/api/v1/tags/
+- Access tags the API via http://questions-bank-production.up.railway.app/api/v1/questions/
 
 ## Queries
-To query the database make a get request to the route `http://questions-bank-production.up.railway.app/questions/search?q=<query>`
+To query the database make a get request to the route `http://questions-bank-production.up.railway.app/api/v1/questions/search?q=<query>`
 E.g.
-`http://questions-bank-production.up.railway.app/questions/search?q=Cytoplasm`
+`http://questions-bank-production.up.railway.app/api/v1/questions/search?q=Cytoplasm`
 should return
 ```
 {
@@ -58,7 +58,7 @@ should return
 }
 ```
 
-`http://questions-bank-production.up.railway.app/questions/search?q=Absorption – root hair cells`
+`http://questions-bank-production.up.railway.app/api/v1/questions/search?q=Absorption – root hair cells`
 ```
 {
     "Questions": [
