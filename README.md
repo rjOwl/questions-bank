@@ -75,7 +75,6 @@ The app is hosted on https://railway.app
 ## Requests/responses example
 E.g.
 `http://questions-bank-production.up.railway.app/api/v1/questions/search?q=Cytoplasm`
-should return
 ```
 {
     "Questions": [
