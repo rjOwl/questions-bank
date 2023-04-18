@@ -1,5 +1,5 @@
 # Questions Bank
-Simple restful api to store questions and their tags, to search and retrive questions based on tags from a topic tree.
+It's a simple restful api to store questions and their tags, to search and retrive questions based on tags from a topic tree.
 
 ## Project tree
 
