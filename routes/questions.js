@@ -9,7 +9,7 @@ const {findQuestinosInDescendants, getAllQuestions, loadTestQuestionsObj} = requ
 // add all questions in the json file
 questionsRouter.get('/search', findQuestinosInDescendants);
 questionsRouter.post('/populate', loadTestQuestionsObj);
-questionsRouter.get('/all', getAllQuestions);
+questionsRouter.get('/', getAllQuestions);
 
 
 // 3 export

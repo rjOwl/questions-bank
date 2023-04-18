@@ -6,7 +6,7 @@ const {getAllTags, loadTestTagsObj} = require('../controllers/tags');
 
 // 2 use 
 tagsRouter.post('/populate', loadTestTagsObj);
-tagsRouter.get('/all', getAllTags);
+tagsRouter.get('/', getAllTags);
 
 
 // 3 export
