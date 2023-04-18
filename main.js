@@ -28,5 +28,7 @@ app.use("/", (req, res) => {
 /* Start The HTTP Server */
 app.listen(PORT, (err) => {
     if (err) console.log(err)
-    else console.log(`Server Started On Port : ${PORT}`)
+    else{
+        console.log('\x1b[32m%s\x1b[0m', '\u2714', `Server Started On Port : ${PORT}\n`)
+    }
 })

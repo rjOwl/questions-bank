@@ -1,5 +1,6 @@
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+const PORT = process.env.PORT || 3000
 
 const options = {
   definition: {
@@ -15,7 +16,8 @@ const options = {
 
 const specs = swaggerJSDoc(options);
 
-console.log("SWAGGER RUNNING...")
+console.log("\n")
+console.log('\x1b[32m%s\x1b[0m', '\u2714', `SWAGGER RUNNING:  http://localhost:${PORT}/api-docs/#/\n`)
 module.exports= (app) => {
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 };
