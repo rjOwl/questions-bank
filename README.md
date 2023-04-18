@@ -55,7 +55,7 @@ Simple restful api to store questions and their tags, to search and retrive ques
     - By default it will create 2 documents, quesionts and tags. If you want to change it go ahead it will be in the models directory, have fun.
 
 
-## Endpoints exist
+## Endpoints
 | Endpoints                                     | Method  | Description                                         |
 |-----------------------------------------------|---------|-----------------------------------------------------|
 |  /api/v1/questions/populate                   | POST    | Add all questions to database from JS file          |
@@ -87,15 +87,3 @@ E.g.
     ]
 }
 ```
-
-`http://questions-bank-production.up.railway.app/api/v1/questions/search?q=Absorption – root hair cells`
-```
-{
-    "Questions": [
-        "105",
-        "132",
-        "139"
-    ]
-}
-```
-
