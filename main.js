@@ -1,17 +1,15 @@
 const express = require('express');
+const questionsRouter = require('./routes/questions');
+const tagsRouter = require('./routes/tags');
+const PORT = process.env.PORT || 3000
+const app = express();
+
 
 require('dotenv').config()
 require("./boot/dbConnection");
 
-
-const PORT = process.env.PORT || 3000
-const app = express();
-
+require('./swagger')(app);
 app.use(express.json());
-
-
-const questionsRouter = require('./routes/questions');
-const tagsRouter = require('./routes/tags');
 
 /*  Routes */
 app.use("/api/v1/questions", questionsRouter)

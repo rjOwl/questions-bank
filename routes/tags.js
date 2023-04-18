@@ -5,7 +5,41 @@ const tagsRouter = express.Router()
 const {getAllTags, loadTestTagsObj} = require('../controllers/tags');
 
 // 2 use 
+
+/**
+ * @swagger
+ * tags:
+ *   name: Tags
+ *   description: API for Tags
+ */
+
+
+/**
+ * @swagger
+ * /tags/populate:
+ *   post:
+ *     tags: [Tags]
+ *     description: create all the tag documents in mongodb
+ *     responses:
+ *       201:
+ *         description: Created
+ *       500:
+ *         description: Server error
+ */
 tagsRouter.post('/populate', loadTestTagsObj);
+
+/**
+ * @swagger
+ * /tags:
+ *   get:
+ *     tags: [Tags]
+ *     description: returns all documents in the tags collection
+ *     responses:
+ *       200:
+ *         description: OK
+ *       500:
+ *         description: Server error
+ */
 tagsRouter.get('/', getAllTags);
 
 
