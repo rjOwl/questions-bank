@@ -8,8 +8,8 @@ Node API that uses MongoDB with Mongoose to store questions and their tags, to s
 - npm
 
 ## Setup
-- Clone this Repo
-- Install requirements using npm install
+- Clone the repo
+- Install requirements using `npm install`
 - Setup account on mongodb Atlas and create your username/pass, cluster, database then use your credentials in the .env file
 - Copy paste tese variable in your .env file and set the values you got from Mongo Atlas 
     - DB_SU=
