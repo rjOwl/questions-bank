@@ -14,8 +14,8 @@ const questionsRouter = require('./routes/questions');
 const tagsRouter = require('./routes/tags');
 
 /*  Routes */
-app.use("/questions", questionsRouter)
-app.use("/tags", tagsRouter)
+app.use("/api/v1/questions", questionsRouter)
+app.use("/api/v1/tags", tagsRouter)
 
 
 /////////
