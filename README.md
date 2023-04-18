@@ -2,32 +2,34 @@
 Simple restful api to store questions and their tags, to search and retrive questions based on tags from a topic tree.
 
 ## Project tree
-questions-bank/
-├── boot/
-│   └── dbConnection.js
-├── controllers/
-│   ├── questions.js
-│   └── tags.js
-├── routes/
-│   ├── questions.js
-│   └── tags.js
-├── services/
-│   ├── questions.js
-│   └── tags.js
-├── models/
-│   ├── questions.js
-│   └── tags.js
-├── dataset/
-│   ├── cleaned-questions.js
-│   ├── cleaned-tags.js
-│   ├── datasetSetup.js
-│   ├── questions_raw_documents.js
-│   └── tags_raw_documents.js
-├── main.js
-├── package.json
-├── .env
-├── .gitignore
-├── README.md
+
+    questions-bank/
+    ├── boot/
+    │   └── dbConnection.js
+    ├── controllers/
+    │   ├── questions.js
+    │   └── tags.js
+    ├── routes/
+    │   ├── questions.js
+    │   └── tags.js
+    ├── services/
+    │   ├── questions.js
+    │   └── tags.js
+    ├── models/
+    │   ├── questions.js
+    │   └── tags.js
+    ├── dataset/
+    │   ├── cleaned-questions.js
+    │   ├── cleaned-tags.js
+    │   ├── datasetSetup.js
+    │   ├── questions_raw_documents.js
+    │   └── tags_raw_documents.js
+    ├── main.js
+    ├── package.json
+    ├── .env
+    ├── .gitignore
+    ├── README.md
+
 
 
 ## Requirements
