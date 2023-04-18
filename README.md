@@ -30,7 +30,18 @@ Simple restful api to store questions and their tags, to search and retrive ques
     ├── .gitignore
     ├── README.md
 
+## Database design choice
 
+We want to get all questions that include a certain tag till the leaf tag-node.
+So since we have a tree of tags we need to traverse the tree of a given tag
+We have some options ([Mongodb docs](https://www.mongodb.com/docs/v3.0/applications/data-models-tree-structures/)):
+- I went with [Model Tree Structures with an Array of Ancestors](https://www.mongodb.com/docs/v3.0/applications/data-models-tree-structures/)
+since I'm not sure if topics could contain "," or the special charater I'm going to use as delimiter.
+
+##### Tag tree with quesionts example:
+![image](https://user-images.githubusercontent.com/11742610/232897087-60553950-e72c-4054-b13c-2bf7acaf354d.png)
+- If we want to query `Database`: it should return Q3, Q5, Q6
+- If we want to query `Programming`: it should return Q4, Q3, Q5, Q6
 
 ## Requirements
 - NodeJS
