@@ -1,4 +1,4 @@
-# questions-bank
+# Questions Bank
 Simple restful api to store questions and their tags, to search and retrive questions based on tags from a topic tree.
 
 ## Requirements
